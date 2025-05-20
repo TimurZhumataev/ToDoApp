@@ -1,6 +1,6 @@
-package com.learnwithiftekhar.jwtsecurity.dto;
+package com.todoapp.dto.auth;
 
-import com.learnwithiftekhar.jwtsecurity.model.Role;
+import com.todoapp.model.Role;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;

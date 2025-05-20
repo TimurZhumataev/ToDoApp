@@ -1,10 +1,9 @@
-package com.learnwithiftekhar.jwtsecurity.service;
+package com.todoapp.service.auth;
 
-import com.learnwithiftekhar.jwtsecurity.dto.TokenPair;
+import com.todoapp.dto.auth.TokenPair;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;

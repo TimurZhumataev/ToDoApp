@@ -1,10 +1,10 @@
-package com.learnwithiftekhar.jwtsecurity.controller;
+package com.todoapp.controller;
 
-import com.learnwithiftekhar.jwtsecurity.dto.LoginRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.RefreshTokenRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.RegisterRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.TokenPair;
-import com.learnwithiftekhar.jwtsecurity.service.AuthService;
+import com.todoapp.dto.auth.LoginRequest;
+import com.todoapp.dto.auth.RefreshTokenRequest;
+import com.todoapp.dto.auth.RegisterRequest;
+import com.todoapp.dto.auth.TokenPair;
+import com.todoapp.service.auth.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,11 +1,11 @@
-package com.learnwithiftekhar.jwtsecurity.service;
+package com.todoapp.service.auth;
 
-import com.learnwithiftekhar.jwtsecurity.dto.LoginRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.RefreshTokenRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.RegisterRequest;
-import com.learnwithiftekhar.jwtsecurity.dto.TokenPair;
-import com.learnwithiftekhar.jwtsecurity.model.User;
-import com.learnwithiftekhar.jwtsecurity.repository.UserRepository;
+import com.todoapp.dto.auth.LoginRequest;
+import com.todoapp.dto.auth.RefreshTokenRequest;
+import com.todoapp.dto.auth.RegisterRequest;
+import com.todoapp.dto.auth.TokenPair;
+import com.todoapp.model.User;
+import com.todoapp.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

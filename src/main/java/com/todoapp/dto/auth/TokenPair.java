@@ -1,10 +1,11 @@
-package com.learnwithiftekhar.jwtsecurity.dto;
+package com.todoapp.dto.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class RefreshTokenRequest {
+public class TokenPair {
+    private String accessToken;
     private String refreshToken;
 }

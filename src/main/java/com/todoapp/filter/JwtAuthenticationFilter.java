@@ -1,6 +1,6 @@
-package com.learnwithiftekhar.jwtsecurity.filter;
+package com.todoapp.filter;
 
-import com.learnwithiftekhar.jwtsecurity.service.JwtService;
+import com.todoapp.service.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

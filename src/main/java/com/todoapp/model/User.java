@@ -1,4 +1,4 @@
-package com.learnwithiftekhar.jwtsecurity.model;
+package com.todoapp.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

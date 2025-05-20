@@ -1,4 +1,4 @@
-package com.learnwithiftekhar.jwtsecurity.dto;
+package com.todoapp.dto.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
-package com.learnwithiftekhar.jwtsecurity.repository;
+package com.todoapp.repository;
 
-import com.learnwithiftekhar.jwtsecurity.model.User;
+import com.todoapp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
