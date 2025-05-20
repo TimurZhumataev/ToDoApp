@@ -30,12 +30,10 @@ public class AuthService {
 
     @Transactional
     public void registerUser(RegisterRequest registerRequest) {
-        // Check if user with the same username already exist
         if(userRepository.existsByUsername(registerRequest.getUsername())) {
             throw new IllegalArgumentException("Username is already in use");
         }
 
-        // Create new user
         User user = User
                 .builder()
                 .fullName(registerRequest.getFullName())
@@ -48,7 +46,6 @@ public class AuthService {
     }
 
     public TokenPair login(LoginRequest loginRequest) {
-        // Authenticate the user
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsername(),
@@ -56,17 +53,14 @@ public class AuthService {
                 )
         );
 
-        // Set authentication in security context
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        // Generate Token Pair
         return jwtService.generateTokenPair(authentication);
     }
 
     public TokenPair refreshToken(@Valid RefreshTokenRequest request) {
 
         String refreshToken = request.getRefreshToken();
-        // check if it is valid refresh token
         if(!jwtService.isRefreshToken(refreshToken)) {
             throw new IllegalArgumentException("Invalid refresh token");
         }

@@ -37,12 +37,10 @@ public class JwtService {
         return new TokenPair(accessToken, refreshToken);
     }
 
-    // Generate access token
     public String generateAccessToken(Authentication authentication) {
         return generateToken(authentication, jwtExpirationMs, new HashMap<>());
     }
 
-    // Generate refresh token
     public String generateRefreshToken(Authentication authentication) {
         Map<String, String> claims = new HashMap<>();
         claims.put("tokenType", "refresh");
@@ -67,7 +65,6 @@ public class JwtService {
                 .compact();
     }
 
-    // Validate token
     public boolean validateTokenForUser(String token, UserDetails userDetails) {
         final String username = extractUsernameFromToken(token);
         return username != null
@@ -87,7 +84,6 @@ public class JwtService {
         return null;
     }
 
-    // Validate if the token is refresh token
     public boolean isRefreshToken(String token) {
         Claims claims = extractAllClaims(token);
         if(claims == null) {
